@@ -1,13 +1,16 @@
 <div>{{user | json}}
-<button (click)="ShowPostsThisUser(user.id)">upload post>></button>
-
+  <button (click)="ShowPostsThisUser(user.id)">upload post>></button>
 
 
   <div *ngFor="let p of postOfUser">
     <b>ID User:</b> {{p.userId}}| <b>IDPost:</b>{{p.id}}
     <br><b>Title:</b> {{p.title}}|<br> <b>Body:</b> {{p.body}}|<br>
-    <button (click)="ShowCommentsToPostId(p.id, p.userId)">show comments</button>
-</div></div>
+    <button (click)="ShowCommentsToPostId(p.id, p.userId)">СингЮзер show comments</button>
+
+
+  </div>
+
+</div>
 
 <router-outlet></router-outlet>
 

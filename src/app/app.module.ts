@@ -12,8 +12,7 @@ import {NexRouteService} from './services/nex-route.service';
 // import {AllCommentComponent} from './components/all-comment/all-comment.component';
 import {AllPostComponent} from './components/all-post/all-post.component';
 import {PostService} from './services/post/post.service';
-import { CommentsOfPostComponent } from './components/comments-of-post/comments-of-post.component';
-import {CommentService} from './services/comment/comment.service';
+import {CommentsOfPostComponent} from './components/comments-of-post/comments-of-post.component';
 
 
 @NgModule({
@@ -37,14 +36,11 @@ import {CommentService} from './services/comment/comment.service';
           {path: ':id', component: SingleUserComponent}
         ]
       },
-      {
-        path: 'posts', component: AllPostComponent,
-         children: [
-           {path: ':id/comments', component: CommentsOfPostComponent }]
-      }
+      {path: 'posts/:id/comments', component: CommentsOfPostComponent}
+
     ])
   ],
-  providers: [UserService, UserResolveService, NexRouteService, PostService, CommentService],
+  providers: [UserService, UserResolveService, NexRouteService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

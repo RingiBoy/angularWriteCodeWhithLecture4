@@ -20,8 +20,4 @@ export class AllPostComponent {
     });
   }
 
-
-  ShowComm(PostId: number) {
-    this.router.navigate(['posts', PostId, 'comments']);
-  }
 }
