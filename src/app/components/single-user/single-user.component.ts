@@ -14,7 +14,7 @@ export class SingleUserComponent {
   user: User;
   postOfUser: Post[];
   // constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
-  //   // this.activatedRoute.params.subscribe(paramss => console.log(paramss));  //получили ай ди юзера на котрого клацнули
+  //   this.activatedRoute.params.subscribe(paramss => console.log(paramss));  //получили ай ди юзера на котрого клацнули
   //   this.activatedRoute.params
   //   .subscribe(paramss => userService.getSingleUser(paramss.id)
 //   .subscribe(value => this.user = value));
@@ -24,10 +24,9 @@ export class SingleUserComponent {
   constructor(
     private activatedRoute: ActivatedRoute, private postService: PostService, private router: Router
   ) {
-    console.log(history.state);
+
     activatedRoute.params.subscribe(value => {
-      console.log(value);
-      console.log('value');
+
       this.user = history.state.user;
     });
 
@@ -39,10 +38,9 @@ export class SingleUserComponent {
   }
 
   ShowCommentsToPostId(PostId: number, UserId: number): void {
-    this.router.navigate(['posts', PostId, 'comments'], {state:{PostId}});
-    console.log('PostId');
-    console.log(PostId);
-    console.log(UserId);
+    this.router.navigate(['posts', PostId, 'comments']);
+
+
 
   }
 

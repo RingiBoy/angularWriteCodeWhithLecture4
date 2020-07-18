@@ -40,7 +40,7 @@ import {CommentService} from './services/comment/comment.service';
       {
         path: 'posts', component: AllPostComponent,
          children: [
-           {path: ':id / comments', component: CommentsOfPostComponent }]
+           {path: ':id/comments', component: CommentsOfPostComponent }]
       }
     ])
   ],

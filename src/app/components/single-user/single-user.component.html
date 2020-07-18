@@ -6,7 +6,7 @@
   <div *ngFor="let p of postOfUser">
     <b>ID User:</b> {{p.userId}}| <b>IDPost:</b>{{p.id}}
     <br><b>Title:</b> {{p.title}}|<br> <b>Body:</b> {{p.body}}|<br>
-    <button (click)="ShowCommentsToPostId(p.id, p.userId)">showcomments</button>
+    <button (click)="ShowCommentsToPostId(p.id, p.userId)">show comments</button>
 </div></div>
 
 <router-outlet></router-outlet>
