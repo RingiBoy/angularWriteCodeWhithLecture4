@@ -1,0 +1,9 @@
+<div *ngFor="let p of posts">
+<p>{{p.id}}</p> - {{p.body}}
+<button (click)="ShowComm(p.id)">show Comments</button>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
