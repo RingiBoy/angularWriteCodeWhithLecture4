@@ -17,6 +17,8 @@ export class AllUserComponent {
   // }
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.data.subscribe(value => this.users = value.xxx);
+    console.log('history.state');
+    console.log(this.activatedRoute.data);
   }
 
 

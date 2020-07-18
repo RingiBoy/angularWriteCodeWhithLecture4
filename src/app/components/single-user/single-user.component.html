@@ -1,3 +1,13 @@
-<p>{{user | json}}</p>
+<div>{{user | json}}
+<button (click)="ShowPostsThisUser(user.id)">upload post>></button>
 
+
+
+  <div *ngFor="let p of postOfUser">
+    <b>ID User:</b> {{p.userId}}| <b>IDPost:</b>{{p.id}}
+    <br><b>Title:</b> {{p.title}}|<br> <b>Body:</b> {{p.body}}|<br>
+    <button (click)="ShowCommentsToPostId(p.id, p.userId)">showcomments</button>
+</div></div>
+
+<router-outlet></router-outlet>
 
