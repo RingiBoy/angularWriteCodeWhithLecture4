@@ -12,4 +12,7 @@ export class CommentService {
   getCommentsOfPost(postId): Observable <Comment[]>{
    return  this.http.get<Comment[]>(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`);
   }
+  getAllComments(): Observable<Comment[]>{
+    return  this.http.get<Comment[]>('https://jsonplaceholder.typicode.com/comments')
+  }
 }

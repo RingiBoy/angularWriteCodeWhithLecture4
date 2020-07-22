@@ -14,7 +14,5 @@ export class UserResolveService implements Resolve<User[]> {
 
   resolve(): Observable<User[]> {
     return this.userService.getAllUsers();
-
-
   }
 }

@@ -11,13 +11,20 @@ import {Post} from '../../models/Post';
 
 export class CommentsOfPostComponent {
   comment: Comment[];
-  post: Post;
+
 
   constructor(private serviceCom: CommentService, private router: Router, private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe(paramData => console.log(paramData));
-    this.activatedRoute.params
-      .subscribe(paramData => serviceCom.getCommentsOfPost(paramData)
-        .subscribe(value => console.log(value)));
+    console.log('constructor');
+    this.activatedRoute.data.subscribe(console.log);
+
+    // this.activatedRoute.params
+    //   .subscribe(paramData => {
+    //       console.log(paramData);
+    //       this.activatedRoute.data.subscribe(value => console.log(value))
+    //     //   serviceCom.getCommentsOfPost(paramData.id)
+    //     //     .subscribe(value => console.log(value));
+    //     }
+    //   );
   }
 }
 

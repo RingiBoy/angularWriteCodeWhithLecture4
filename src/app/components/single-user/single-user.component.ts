@@ -39,10 +39,7 @@ export class SingleUserComponent {
 
   ShowCommentsToPostId(PostId: number, UserId: number): void {
     this.router.navigate(['posts', PostId, 'comments']);
-
-
-
-  }
+}
 
 // toUserDetail(use: User): void {
 //   this.router.navigate(['users', use.id], {state: {user: use}});
